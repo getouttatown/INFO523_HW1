@@ -32,7 +32,7 @@ raw <- melt(raw,
 raw$day <- as.numeric(as.character(raw$day))
 raw <- raw[, c("year", "month", "day", "element", "value")]
 # ------------------------------------------
-
+# Some annotations
 head(raw)
 
 tidy <- dcast(raw, year + month + day ~ element, 
@@ -59,7 +59,7 @@ head(tidy)
 # ------------------------------------------
 
 # Data split across many files
-
+# More annotations
 df1 <- data.frame(color = "white", value = c(3, 4))
 df2 <- data.frame(color = "blue", value = c(3, 4, 5))
 rbind(df1, df2)
